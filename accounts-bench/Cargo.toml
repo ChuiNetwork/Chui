@@ -1,0 +1,22 @@
+[package]
+authors = ["Chui Developers <support@chui.network>"]
+edition = "2021"
+name = "chui-accounts-benchmark"
+version = "1.3.0"
+repository = "https://github.com/chuinetwork/chui"
+license = "Apache-2.0"
+homepage = "https://chui.network/"
+publish = false
+
+[dependencies]
+log = "0.4.14"
+rayon = "1.5.1"
+chui-logger = { path = "../logger", version = "=1.9.29" }
+chui-runtime = { path = "../runtime", version = "=1.9.29" }
+chui-measure = { path = "../measure", version = "=1.9.29" }
+chui-sdk = { path = "../sdk", version = "=1.9.29" }
+chui-version = { path = "../version", version = "=0.6.3" }
+clap = "2.33.1"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
