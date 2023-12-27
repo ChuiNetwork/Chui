@@ -1,3 +1,5 @@
+![logo](https://github.com/ChuiNetwork/.github/assets/56628755/59313d24-8ab2-4383-9a84-9e5449a58844)
+
 # Chui Network - Overview
 
 ## Technical Specifications
