@@ -1,0 +1,49 @@
+[package]
+name = "chui-client"
+version = "1.9.29"
+description = "Chui Client"
+authors = ["Chui Developers <support@chui.network>"]
+repository = "https://github.com/chuinetwork/chui"
+homepage = "https://chui.network/"
+documentation = "https://docs.rs/chui-client"
+license = "Apache-2.0"
+edition = "2021"
+
+[dependencies]
+base64 = "0.13.0"
+bincode = "1.3.3"
+bs58 = "0.4.0"
+clap = "2.33.0"
+indicatif = "0.16.2"
+jsonrpc-core = "18.0.0"
+log = "0.4.14"
+rayon = "1.5.1"
+reqwest = { version = "0.11.6", default-features = false, features = ["blocking", "rustls-tls", "json"] }
+semver = "1.0.4"
+serde = "1.0.130"
+serde_derive = "1.0.103"
+serde_json = "1.0.72"
+chui-account-decompiler = { path = "../account-decompiler", version = "=1.9.29" }
+chui-clap-utils = { path = "../clap-utils", version = "=1.9.29" }
+chui-faucet = { path = "../faucet", version = "=1.9.29" }
+chui-net-utils = { path = "../net-utils", version = "=1.9.29" }
+chui-measure = { path = "../measure", version = "=1.9.29" }
+chui-sdk = { path = "../sdk", version = "=1.9.29" }
+chui-transaction-status = { path = "../transaction-status", version = "=1.9.29" }
+chui-version = { path = "../version", version = "=0.6.3" }
+chui-vote-program = { path = "../programs/vote", version = "=1.9.29" }
+thiserror = "1.0"
+tokio = { version = "~1.14.1", features = ["full"] }
+tungstenite = { version = "0.16.0", features = ["rustls-tls-webpki-roots"] }
+url = "2.2.2"
+evm-state = { path = "../evm-utils/evm-state" }
+evm-rpc = { path = "../evm-utils/evm-rpc" }
+derivative = "2.2"
+
+[dev-dependencies]
+assert_matches = "1.5.0"
+jsonrpc-http-server = "18.0.0"
+chui-logger = { path = "../logger", version = "=1.9.29" }
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

@@ -1,0 +1,24 @@
+[package]
+authors = ["Chui Developers <support@nexis.network>"]
+edition = "2021"
+name = "chui-cli-config"
+description = "Blockchain, Rebuilt for Scale"
+version = "1.9.29"
+repository = "https://github.com/chuinetwork/chui"
+license = "Apache-2.0"
+homepage = "https://chui.network/"
+documentation = "https://docs.rs/chui-cli-config"
+
+[dependencies]
+dirs-next = "2.0.0"
+lazy_static = "1.4.0"
+serde = "1.0.130"
+serde_derive = "1.0.103"
+serde_yaml = "0.8.21"
+url = "2.2.2"
+
+[dev-dependencies]
+anyhow = "1.0.51"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

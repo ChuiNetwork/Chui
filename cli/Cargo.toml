@@ -1,0 +1,66 @@
+[package]
+authors = ["Chui Developers <support@chui.network>"]
+edition = "2021"
+name = "chui-cli"
+description = "Blockchain, Rebuilt for Scale"
+version = "1.9.29"
+repository = "https://github.com/chuinetwork/chui"
+license = "Apache-2.0"
+homepage = "https://chui.network/"
+documentation = "https://docs.rs/chui-cli"
+
+[dependencies]
+bincode = "1.3.3"
+bs58 = "0.4.0"
+clap = "2.33.1"
+criterion-stats = "0.3.0"
+ctrlc = { version = "3.2.1", features = ["termination"] }
+console = "0.15.0"
+const_format = "0.2.22"
+log = "0.4.14"
+humantime = "2.0.1"
+num-traits = "0.2"
+pretty-hex = "0.2.1"
+reqwest = { version = "0.11.6", default-features = false, features = ["blocking", "rustls-tls", "json"] }
+semver = "1.0.4"
+serde = "1.0.130"
+serde_derive = "1.0.103"
+serde_json = "1.0.72"
+chui-account-decompiler = { path = "../account-decompiler", version = "=1.9.29" }
+chui-bpf-loader-program = { path = "../programs/bpf_loader", version = "=1.9.29" }
+chui-clap-utils = { path = "../clap-utils", version = "=1.9.29" }
+chui-cli-config = { path = "../cli-config", version = "=1.9.29" }
+chui-cli-output = { path = "../cli-output", version = "=1.9.29" }
+chui-client = { path = "../client", version = "=1.9.29" }
+chui-config-program = { path = "../programs/config", version = "=1.9.29" }
+chui-faucet = { path = "../faucet", version = "=1.9.29" }
+chui-logger = { path = "../logger", version = "=1.9.29" }
+chui-program-runtime = { path = "../program-runtime", version = "=1.9.29" }
+chui_rbpf = "=0.2.24"
+chui-remote-wallet = { path = "../remote-wallet", version = "=1.9.29" }
+chui-sdk = { path = "../sdk", version = "=1.9.29" }
+chui-transaction-status = { path = "../transaction-status", version = "=1.9.29" }
+chui-version = { path = "../version", version = "=0.6.3" }
+chui-vote-program = { path = "../programs/vote", version = "=1.9.29" }
+spl-memo = { version = "=3.0.1", features = ["no-entrypoint"] }
+thiserror = "1.0.30"
+tiny-bip39 = "0.8.2"
+
+evm-state = { path = "../evm-utils/evm-state" }
+evm-rpc = { path = "../evm-utils/evm-rpc" }
+chui-evm-loader-program = { path = "../evm-utils/programs/evm_loader" }
+hex = "0.4.2"
+anyhow = { version = "1.0.42", features = ["std"] }
+
+
+[dev-dependencies]
+chui-streamer = { path = "../streamer", version = "=1.9.29" }
+chui-test-validator = { path = "../test-validator", version = "=1.9.29" }
+tempfile = "3.2.0"
+
+[[bin]]
+name = "chui"
+path = "src/main.rs"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
