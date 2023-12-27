@@ -1,0 +1,30 @@
+[package]
+authors = ["Chui Developers <support@chui.network>"]
+edition = "2021"
+name = "chui-banking-bench"
+version = "1.9.29"
+repository = "https://github.com/chuinetwork/chui"
+license = "Apache-2.0"
+homepage = "https://chui.network/"
+publish = false
+
+[dependencies]
+clap = "2.33.1"
+crossbeam-channel = "0.5"
+log = "0.4.14"
+rand = "0.7.0"
+rayon = "1.5.1"
+chui-core = { path = "../core", version = "=1.9.29" }
+chui-gossip = { path = "../gossip", version = "=1.9.29" }
+chui-ledger = { path = "../ledger", version = "=1.9.29" }
+chui-logger = { path = "../logger", version = "=1.9.29" }
+chui-measure = { path = "../measure", version = "=1.9.29" }
+chui-perf = { path = "../perf", version = "=1.9.29" }
+chui-poh = { path = "../poh", version = "=1.9.29" }
+chui-runtime = { path = "../runtime", version = "=1.9.29" }
+chui-streamer = { path = "../streamer", version = "=1.9.29" }
+chui-sdk = { path = "../sdk", version = "=1.9.29" }
+chui-version = { path = "../version", version = "=0.6.3" }
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
