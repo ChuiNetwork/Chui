@@ -1,0 +1,37 @@
+/**
+ * This file contains the Cargo.toml configuration for the Chui banks client package.
+ * It specifies the package name, version, description, authors, repository, license, homepage, and documentation.
+ * It also lists the dependencies and dev-dependencies required by the package.
+ */
+[package]
+name = "chui-banks-client"
+version = "1.9.29"
+description = "Chui banks client"
+authors = ["Chui Developers <support@chui.network>"]
+repository = "https://github.com/chuinetwork/chui"
+license = "Apache-2.0"
+homepage = "https://chui.network/"
+documentation = "https://docs.rs/chui-banks-client"
+edition = "2021"
+
+[dependencies]
+borsh = "0.9.1"
+futures = "0.3"
+chui-banks-interface = { path = "../banks-interface", version = "=1.9.29" }
+chui-program = { path = "../sdk/program", version = "=1.9.29" }
+chui-sdk = { path = "../sdk", version = "=1.9.29" }
+tarpc = { version = "0.27.2", features = ["full"] }
+thiserror = "1.0"
+tokio = { version = "~1.14.1", features = ["full"] }
+tokio-serde = { version = "0.8", features = ["bincode"] }
+
+[dev-dependencies]
+chui-runtime = { path = "../runtime", version = "=1.9.29" }
+chui-banks-server = { path = "../banks-server", version = "=1.9.29" }
+
+[lib]
+crate-type = ["lib"]
+name = "chui_banks_client"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
