@@ -1,0 +1,25 @@
+/**
+ * This file contains the Cargo.toml configuration for the `chui-bench-streamer` package.
+ * It specifies the package metadata, dependencies, and other configuration options.
+ */
+
+[package]
+authors = ["Chui Developers <support@chui.network>"]
+edition = "2021"
+name = "chui-bench-streamer"
+version = "1.9.29"
+repository = "https://github.com/chuinetwork/chui"
+license = "Apache-2.0"
+homepage = "https://chui.network/"
+publish = false
+
+[dependencies]
+clap = "2.33.1"
+chui-clap-utils = { path = "../clap-utils", version = "=1.9.29" }
+chui-streamer = { path = "../streamer", version = "=1.9.29" }
+chui-logger = { path = "../logger", version = "=1.9.29" }
+chui-net-utils = { path = "../net-utils", version = "=1.9.29" }
+chui-version = { path = "../version", version = "=0.6.3" }
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

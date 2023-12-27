@@ -1,0 +1,46 @@
+/**
+ * This file contains the Cargo.toml configuration for the `chui-bench-exchange` package.
+ * It specifies the package metadata, dependencies, and dev-dependencies.
+ * The package metadata includes authors, edition, name, version, repository, license, homepage, and publish status.
+ * The dependencies section lists the external crates required by the package.
+ * The dev-dependencies section lists the crates required for development purposes.
+ * The `package.metadata.docs.rs` section specifies the target platform for documentation generation.
+ */
+[package]
+authors = ["Chui Developers <support@chui.network>"]
+edition = "2018"
+name = "chui-bench-exchange"
+version = "1.6.14"
+repository = "https://github.com/chuinetwork/chui"
+license = "Apache-2.0"
+homepage = "https://chui.network/"
+publish = false
+
+[dependencies]
+clap = "2.33.1"
+itertools = "0.9.0"
+log = "0.4.11"
+num-derive = "0.3"
+num-traits = "0.2"
+rand = "0.7.0"
+rayon = "1.5.0"
+serde_json = "1.0.56"
+serde_yaml = "0.8.13"
+chui-clap-utils = { path = "../clap-utils", version = "=1.9.29" }
+chui-core = { path = "../core", version = "=1.9.29" }
+chui-genesis = { path = "../genesis", version = "=1.9.29" }
+chui-client = { path = "../client", version = "=1.9.29" }
+chui-faucet = { path = "../faucet", version = "=1.9.29" }
+chui-exchange-program = { path = "../programs/exchange", version = "=1.9.29" }
+chui-logger = { path = "../logger", version = "=1.9.29" }
+chui-metrics = { path = "../metrics", version = "=1.9.29" }
+chui-net-utils = { path = "../net-utils", version = "=1.9.29" }
+chui-runtime = { path = "../runtime", version = "=1.9.29" }
+chui-sdk = { path = "../sdk", version = "=1.9.29" }
+chui-version = { path = "../version", version = "=0.6.3" }
+
+[dev-dependencies]
+chui-local-cluster = { path = "../local-cluster", version = "=1.9.29" }
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
