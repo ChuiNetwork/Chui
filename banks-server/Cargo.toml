@@ -1,0 +1,32 @@
+/// This file contains the Cargo.toml configuration for the Chui banks server package.
+/// It specifies the package name, version, description, authors, repository, license, homepage,
+/// documentation link, edition, dependencies, and crate type.
+[package]
+name = "chui-banks-server"
+version = "1.9.29"
+description = "Chui banks server"
+authors = ["Chui Developers <support@chui.network>"]
+repository = "https://github.com/chuinetwork/chui"
+license = "Apache-2.0"
+homepage = "https://chui.network/"
+documentation = "https://docs.rs/chui-banks-server"
+edition = "2021"
+
+[dependencies]
+bincode = "1.3.3"
+futures = "0.3"
+chui-banks-interface = { path = "../banks-interface", version = "=1.9.29" }
+chui-runtime = { path = "../runtime", version = "=1.9.29" }
+chui-sdk = { path = "../sdk", version = "=1.9.29" }
+chui-send-transaction-service = { path = "../send-transaction-service", version = "=1.9.29" }
+tarpc = { version = "0.27.2", features = ["full"] }
+tokio = { version = "~1.14.1", features = ["full"] }
+tokio-serde = { version = "0.8", features = ["bincode"] }
+tokio-stream = "0.1"
+
+[lib]
+crate-type = ["lib"]
+name = "chui_banks_server"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

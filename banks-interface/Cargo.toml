@@ -1,0 +1,22 @@
+[package]
+name = "chui-banks-interface"
+version = "1.9.29"
+description = "Chui banks RPC interface"
+authors = ["Chui Developers <support@chui.network>"]
+repository = "https://github.com/chuinetwork/chui"
+license = "Apache-2.0"
+homepage = "https://chui.network/"
+documentation = "https://docs.rs/chui-banks-interface"
+edition = "2021"
+
+[dependencies]
+serde = { version = "1.0.130", features = ["derive"] }
+chui-sdk = { path = "../sdk", version = "=1.9.29" }
+tarpc = { version = "0.27.2", features = ["full"] }
+
+[lib]
+crate-type = ["lib"]
+name = "chui_banks_interface"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
