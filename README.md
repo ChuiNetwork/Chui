@@ -135,6 +135,3 @@ For specific issues, refer to the project's issue tracker or forums.
 Copyright 2024 Chui Network
 Licensed under Apache License, Version 2.0.
 Available at http://www.apache.org/licenses/LICENSE-2.0
-
-
-This version maintains a professional tone while streamlining the structure for clarity and conciseness.
