@@ -62,7 +62,7 @@ To prepare your environment, follow these instructions:
    - For Linux (Ubuntu):
      ```bash
      sudo apt-get update
-     sudo apt-get install libssl-dev libudev-dev pkg-config zlib1g-dev llvm clang make cmake protobuf-compiler
+     sudo apt-get install libssl-dev libudev-dev pkg-config zlib1g-dev llvm clang cmake make libprotobuf-dev protobuf-compiler
      ```
 
    - For Mac M1, install Rosetta:
