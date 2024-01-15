@@ -1,0 +1,113 @@
+[workspace]
+members = [
+    "account-decoder",
+    "accounts-bench",
+    "accounts-cluster-bench",
+    "banking-bench",
+    "banks-client",
+    "banks-interface",
+    "banks-server",
+    "bench-streamer",
+    "bench-tps",
+    "bench-tps-evm",
+    "bucket_map",
+    "bloom",
+    "clap-utils",
+    "cli-config",
+    "cli-output",
+    "client",
+    "core",
+    "dos",
+    "download-utils",
+    "entry",
+    "faucet",
+    "frozen-abi",
+    "perf",
+    "validator",
+    "genesis",
+    "genesis-utils",
+    "geyser-plugin-interface",
+    "geyser-plugin-manager",
+    "gossip",
+    "install",
+    "keygen",
+    "ledger",
+    "ledger-tool",
+    "local-cluster",
+    "logger",
+    "log-analyzer",
+    "merkle-root-bench",
+    "merkle-tree",
+    "storage-bigtable",
+    "storage-proto",
+    "streamer",
+    "measure",
+    "metrics",
+    "net-shaper",
+    "notifier",
+    "evm-utils/evm-block-recovery",
+    "evm-utils/evm-bridge",
+    "evm-utils/programs/evm_loader",
+    "evm-utils/evm-state",
+    "evm-utils/evm-rpc",
+    "poh",
+    "poh-bench",
+    "program-test",
+    "programs/address-lookup-table",
+    "programs/address-lookup-table-tests",
+    "programs/ed25519-tests",
+    "programs/bpf_loader",
+    "programs/bpf_loader/gen-syscall-list",
+    "programs/compute-budget",
+    "programs/config",
+    "programs/sleep",
+    "programs/stake",
+    "programs/vote",
+    "remote-wallet",
+    "rpc",
+    "runtime",
+    "runtime/store-tool",
+    "sdk",
+    "sdk/cargo-build-bpf",
+    "sdk/cargo-test-bpf",
+    "send-transaction-service",
+    "stake-accounts",
+    "sys-tuner",
+    "tokens",
+    "transaction-dos",
+    "transaction-status",
+    "upload-perf",
+    "net-utils",
+    "version",
+    "cli",
+    "rayon-threadlimit",
+    "watchtower",
+    "repair-check",
+    "replica-node",
+    "replica-lib",
+    "test-validator",
+    "rpc-test",
+    "client-test",
+    "rbpf-cli"
+]
+
+exclude = [
+    "programs/bpf",
+]
+
+# TODO: Remove once the "simd-accel" feature from the reed-solomon-erasure
+# dependency is supported on Apple M1. v2 of the feature resolver is needed to
+# specify arch-specific features.
+resolver = "2"
+
+[profile.dev]
+split-debuginfo = "unpacked"
+
+[patch.crates-io]
+primitive-types = { git = "https://github.com/ChuiNetwork/parity-common", tag = "primitive-types-v0.11-with-borsh-support-nostd" }
+rlp = { git = "https://github.com/ChuiNetwork/parity-common", tag = "primitive-types-v0.11-with-borsh-support-nostd" }
+uint = { git = "https://github.com/ChuiNetwork/parity-common", tag = "primitive-types-v0.11-with-borsh-support-nostd" }
+spl-memo = { git = "https://github.com/ChuiNetwork/spl-memo", branch = "solana-1.9.29" }
+# TODO: remove once jsonrpc-core-client 18.0.1 is released
+jsonrpc-core = { git = "https://github.com/paritytech/jsonrpc", rev = "e724d087defc0af35bc1c844049d1611588d8466", version = "18.0.0" }
+jsonrpc-core-client = { git = "https://github.com/paritytech/jsonrpc", rev = "e724d087defc0af35bc1c844049d1611588d8466", version = "18.0.0" }
