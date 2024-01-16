@@ -52,6 +52,7 @@ members = [
     "evm-utils/evm-rpc",
     "poh",
     "poh-bench",
+    "program-runtime",
     "program-test",
     "programs/address-lookup-table",
     "programs/address-lookup-table-tests",
